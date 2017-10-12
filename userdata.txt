@@ -1,0 +1,5 @@
+#!/bin/bashyum install httpd -yyum update -yaws s3 cp s3://ithollow-webbucket/image001.png /var/www/html/image001.png
+aws s3 cp s3://ithollow-webbucket/index.html /var/www/html/temp1.html
+curl http://169.254.169.254/latest/meta-data >> /var/www/html/temp2.html
+cat /var/www/html/temp2.html /var/www/html/temp1.html > /var/www/html/index.html
+service httpd startchkconfig httpd on
